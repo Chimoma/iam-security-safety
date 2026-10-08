@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white font-sans text-navy antialiased;
+  }
+  :focus-visible {
+    outline: 3px solid #ffc21a;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px #0b1f3a;
+  }
+}
+
+@layer utilities {
+  .hazard {
+    background-image: repeating-linear-gradient(-45deg, #ffc21a 0 14px, #0b1f3a 14px 28px);
+  }
+  .clip-slant {
+    clip-path: polygon(0 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
+  }
+}
